@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<head>
+	<title>The Brownie - Responsive HTML5 Template</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href="{% static 'blog/css/font-awesome.min.css'%}" rel="stylesheet">
+	<link href="{% static 'blog/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+	<link href="{% static 'blog/css/templatemo_style.css'%}" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    .red {color:red;}
+    .yellow {color:yellow;}
+    p {color:green}
+    </style>
+</head>
+<body><!--
+	<nav id="responsive-menu">
+        <ul class="menu-holder">
+            <li class="active"><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#about"><i class="fa fa-briefcase"></i>About</a></li>
+            <li><a href="#services"><i class="fa fa-cogs"></i>Services</a></li>
+            <li><a href="#products"><i class="fa fa-list"></i>Products</a></li>
+            <li><a href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
+        </ul>
+    </nav>-->
+    <div class="templatemo-site-header">
+		<div class="container">
+			<div class="row templatemo-position-relative">				
+			<!--	<nav class="hidden-xs text-uppercase templatemo-nav">
+					<ul class="menu-holder">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>					
+						<li><a href="#services">Services</a></li>
+						<li><a href="#products">Products</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>-->
+				<h1 class="templatemo-site-name">
+                	<span class="templatemo-brown">B4</span> 
+                	<span class="templatemo-gold">IT信管部</span>
+                </h1>
+				<div class="text-right visible-xs">
+		            <a href="#" id="mobile_menu"><span class="fa fa-bars"></span></a>
+		        </div>
+			</div>
+		</div>    	
+    </div>
+	<section id="home" class="templatemo-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 templatemo-position-relative">
+					<div class="templatemo-flex-center templatemo-black-bg text-center">
+						<div class="templatemo-home-image-container">
+                            {%block picture %}{% endblock%}
+							</div>
+					</div>										
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="templatemo-content-box templatemo-second-box">
+                    {% block information %}{% endblock %}
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+{% block blogpost %}{% endblock %}
+	<script src="{% static 'blog/js/jquery-1.11.1.min.js'%}"></script>
+	<script src="{% static 'blog/js/jquery.jcarousel.min.js'%}"></script>
+	<script src="{% static 'blog/js/templatemo_script.js'%}"></script>
+</body>
+</html>

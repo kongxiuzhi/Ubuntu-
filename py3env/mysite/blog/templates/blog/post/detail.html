@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block picture %} 
+<img src="{% static 'blog/images/bicycle.jpg' %}" alt="Home" class="templatemo-home-image">
+{% endblock %}
+{% block information %}
+<div style="font-size:25px">
+<p class="yellow">姓名：{{infors.name}}</p>
+<p class="yellow">电话：{{infors.phone}}</p>
+<p class="yellow">邮箱：{{infors.mail}}</p>
+<p class="yellow">是否上班：{{infors.incomp}}</p>
+<p class="yellow">负责的业务：{{ infors.service }}</p>
+<p class="yellow">工作安排：{{infors.work }}</p>
+</div>
+{% endblock%}
+{% block blogpost %}
+   <div class="contener text-center" style="font-size:20px;">
+   <div class="row">
+   <div class="col-lg-6 col-lg-offset-3">
+   <h1 style="color:red">{{post.title}}</h1>
+   <p style="font-size:20px;color:yellow;">Published {{post.publish }} by {{post.author}} </p>
+   {{ post.body | linebreaks}}
+   </div>
+   </div>
+   </div>
+{% endblock %}

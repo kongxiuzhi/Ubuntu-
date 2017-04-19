@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+      .libod {border:solid yellow 2px ;float:right;padding:1px}
+      .textblack {font-size:20px;color:black;}
+      p {color:black;}
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>B4 IT</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css'%}" />
+	<link href="{% static 'css/nivo-lightbox.css'%}" rel="stylesheet" />
+	<link href="{% static 'css/nivo-lightbox-theme/default/default.css'%}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'css/animate.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+	<link href="{% static 'css/default.css'%}" rel="stylesheet">
+</head>
+<body data-spy="scroll">
+
+    <div class="container">
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <li>
+                                <a href="#about" class="gn-icon gn-icon-download">About us</a>
+                            </li>
+                            <li><a href="#service" class="gn-icon gn-icon-cog">我们的工作</a></li>
+                            <li><a href="#works" class="gn-icon gn-icon-help">我的足记</a></li>
+                        </ul>
+                    </div>
+                    <!-- /gn-scroller -->
+                </nav>
+            </li>
+            <li><a href="index.html">B4-IT信管部</a></li>
+            <li>
+                <ul style="font-size:25px;">
+                    <li class="libod"><a href="http://mail.boe.com.cn" target="_blank">邮箱</a></li>
+                    <li class="libod"><a href="http://b04oa01.boe.com.cn" target="_blank">officenet</a></li>
+                    <li class="libod"><a href="http://portal.boe.com.cn" target="_blank">portal</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro" style="background:url('{% static "images/img-bg.jpg"%}') no-repeat center center; background-size: cover;">
+        <div class="slogan">
+            <h1>B4 IT 信 管 部</h1>
+            <p>我们B4信管IT科为B4的腾飞保驾护航！</p>
+            <a href="#about" class="btn btn-skin scroll">Learn more</a>
+        </div>
+    </section>
+    <!-- /Section: intro -->
+
+    <!-- Section: about -->
+    <section id="about" class="home-section text-center bg-gray">
+        <div class="heading-about marginbot-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+
+                        <div class="section-heading">
+                            <h2>About us</h2>
+                            <p>天生我才必有用</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'xyl' %}"> <img src="{% static 'images/team/xyl.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{xyl.name}}</strong><br/><strong>是否上班:</strong>{{xyl.incomp}}<br/><strong>负责的业务:</strong>{{xyl.jods}}<br/>
+                               <strong>电话:</strong>{{xyl.phone}}<br/><strong>邮箱:</strong><br/>{{xyl.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'xck' %}" > <img src="{% static 'images/team/xck.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{xck.name}}</strong><br/><strong>是否上班:</strong>{{xck.incomp}}<br/><strong>负责的业务:</strong>{{xck.service}}<br/>
+                               <strong>电话:</strong>{{xck.phone}}<br/><strong>邮箱:</strong><br/>{{xck.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>   
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'wy' %}" > <img src="{% static 'images/team/wy.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{wy.name}}</strong><br/><strong>是否上班:</strong>{{wy.incomp}}<br/><strong>负责的业务:</strong>{{wy.service}}<br/>
+                               <strong>电话:</strong>{{wy.phone}}<br/><strong>邮箱:</strong><br/>{{wy.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'wc' %}"> <img src="{% static 'images/team/wc.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{wc.name}}</strong><br/><strong>是否上班:</strong>{{wc.incomp}}<br/><strong>负责的业务:</strong>{{wc.service}}<br/>
+                               <strong>电话:</strong>{{wc.phone}}<br/><strong>邮箱:</strong><br/>{{wc.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div><br/><br/></div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'zxw' %}"> <img src="{% static 'images/team/zxw.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{zxw.name}}</strong><br/><strong>是否上班:</strong>{{zxw.incomp}}<br/><strong>负责的业务:</strong>{{zxw.service}}<br/>
+                               <strong>电话:</strong>{{zxw.phone}}<br/><strong>邮箱:</strong><br/>{{zxw.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'pdy' %}"> <img src="{% static 'images/team/pdy.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{pdy.name}}</strong><br/><strong>是否上班:</strong>{{pdy.incomp}}<br/><strong>负责的业务:</strong>{{pdy.service}}<br/>
+                               <strong>电话:</strong>{{pdy.phone}}<br/><strong>邮箱:</strong><br/>{{pdy.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>   
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'dy' %}"> <img src="{% static 'images/team/dy.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{dy.name}}</strong><br/><strong>是否上班:</strong>{{dy.incomp}}<br/><strong>负责的业务:</strong>{{dy.service}}<br/>
+                               <strong>电话:</strong>{{dy.phone}}<br/><strong>邮箱:</strong><br/>{{dy.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3">
+
+                    <div class="team boxed-grey">
+                        <div class="inner">
+                            <div class="avatar">
+                               <a href="{% url 'blog:gerenblog' 'kxz' %}"> <img src="{% static 'images/team/kxz.jpg'%}" alt="" class="img-responsive" /></a></div>
+                            <div align ="left">
+                            <p><strong>B4IT {{kxz.name}}</strong><br/><strong>是否上班:</strong>{{kxz.incomp}}<br/><strong>负责的业务:</strong>{{kxz.service}}<br/>
+                               <strong>电话:</strong>{{kxz.phone}}<br/><strong>邮箱:</strong><br/>{{kxz.mail}}
+                             </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /Section: about -->
+
+
+    <!-- Section: services -->
+    <section id="service" class="home-section text-center">
+
+        <div class="heading-about marginbot-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+
+                        <div class="section-heading">
+                            <h2>我们的工作</h2>
+                            <p>B4IT科涉及的工作内容很多，主要包括：计算机的发放和维修，各种微信、QQ、U盘、VPN、邮箱、门禁等权限的开通，桌面云平台、餐卡门禁系统、计算机网络系统以及视频监控系统等系统的建设和维护，并且协助举办各种会议和活动，开通视频会议等。</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fa fa-code fa-3x"></i>
+                        </div>
+                        <div class="service-desc">
+                            <h5>网络权限</h5>
+                            <p>因为涉及到信息安全，QQ、微信以及某些论坛和网站已被禁止通过内部网络访问，如果因工作需要使用到某些被管控的软件或功能需要走审批开通，具体流程请联系武岳</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fa fa-cog fa-3x"></i>
+                        </div>
+                        <div class="service-desc">
+                            <h5>故障报修</h5>
+                            <p>B4以及S2根据不同的楼号我们都分配了具体的人员担当。例如一号楼担当武岳、薛诚锴，二号楼担当许永亮、代洋。三号楼以及S2担当张晓伟，彭登涯、孔秀志。如果计算机和网络网络出现故障请根据自己的位置联系对应的担当。</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fa fa-suitcase fa-3x"></i>
+                        </div>
+                        <div class="service-desc">
+                            <h5>桌面云</h5>
+                            <p>桌面云申请开通，桌面云系统故障请联系代洋、许永亮。桌面云存储扩容、文件找回请联系吴超、薛诚锴。</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+
+                    <div class="service-box">
+                        <div class="service-icon">
+                            <i class="fa fa-rocket fa-3x"></i>
+                        </div>
+                        <div class="service-desc">
+                            <h5>其他业务担当</h5>
+                            <p><strong>电脑、电话申请：</strong>薛诚锴、代洋<strong> 邮箱：</strong>吴超 <strong>VPN开通：</strong>许永亮 <strong>视频会议：</strong>孔秀志 <strong>餐卡门禁：</strong>彭等涯 <strong>视频监控：</strong>张晓伟 <strong>网络权限：</strong>武岳 </p>
+                            <a class="black" href="{% url "blog:service"%}" style="font-size:30px;">MORE</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Section: services -->
+
+
+    <!-- Section: works -->
+    <section id="works" class="home-section text-center bg-gray">
+        <div class="heading-works marginbot-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+
+                        <div class="section-heading">
+                            <h2>我们的足迹</h2>
+                            <p>我们的工作，我们的团队</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="row gallery-item">
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/1.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/1.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/2.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/2.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/3.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/3.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/4.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/4.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/5.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/5.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/6.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/6.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/7.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/7.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="{% static 'images/works/8.jpg'%}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="{% static 'images/works/1@2x.jpg'%}">
+                                <img src="{% static 'images/works/8.jpg'%}" class="img-responsive" alt="img">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class=container>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            {% with comments.count as total_comments %}
+                <h2 style="font-size=20px;color:black;">
+                   总共有 {{ total_comments}}个评论。
+                </h2>
+            {% endwith %}
+            {% for comment in comments %}
+                <div>
+                    <p class="textblack">
+                        第{{ forloop.counter }}个评论---{{ comment.name }}在{{ comment.created}}发表。
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                <br/>
+            {% empty %}
+            <p class="textblack">还没有人发表评论！</p>
+            {% endfor %}
+            <h2>您的建议！</h2>
+            <form action="." method="post">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <p><input type="submit" value="添加"></p>
+
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JavaScript Files -->
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/jquery.easing.min.js'%}"></script>
+    <script src="{% static 'js/classie.js'%}"></script>
+    <script src="{% static 'js/gnmenu.js'%}"></script>
+    <script src="{% static 'js/jquery.scrollTo.js'%}"></script>
+    <script src="{% static 'js/nivo-lightbox.min.js'%}"></script>
+    <script src="{% static 'js/stellar.js'%}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/custom.js'%}"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base1.html" %}
+{% load staticfiles %}
+{% block formsection %}
+        <h1>注册页面：</h1>
+        <table style="boder: 1px solid transparent;margin:auto;">
+            <form class="form-horizontal" role="form" action="." method="post">
+                {% csrf_token %}
+                <tbody>
+                {% for field in uf %}
+                    <tr>
+                        <td>{{ field.label_tag}}</td>
+                        <td>{{ field }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="2">
+                    <input type="submit" value="Submit"/>
+                    <a href="{% url 'regist'%}">登录</a>
+                    </td></tr>
+                </tfoot>
+            </form>
+        </table>
+{% endblock %}

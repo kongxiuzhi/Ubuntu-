@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% block picture %} 
+<img src="{% static 'blog/images/bicycle.jpg' %}" alt="Home" class="templatemo-home-image">
+{% endblock %}
+{% block information %}
+<div style="font-size:25px">
+<p class="yellow">姓名：{{infors.name}}</p>
+<p class="yellow">电话：{{infors.phone}}</p>
+<p class="yellow">邮箱：{{infors.mail}}</p>
+<p class="yellow">是否上班：{{infors.incomp}}</p>
+<p class="yellow">负责的业务：{{ infors.service }}</p>
+<p class="yellow">工作安排：{{infors.work }}</p>
+</div>
+{% endblock%}
+{% block blogpost %}
+       {%for post in posts %}
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="templatemo-content-box text-center">
+                    <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                     <p style="font-size:20px;color:yellow;">Published {{ post.publish }} by {{ post.author }}</p>
+                     <p>{{post.body|truncatechars:200|linebreaks}}</p>
+
+					</div>										
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="templatemo-flex-center templatemo-black-bg">
+                    <p style="font-size:500px;color:yellow;">IT</p>
+
+					</div>					
+				</div>
+			</div>
+        {% endfor %}
+{% endblock %}
+{% block blogpos %}
+    <h1>My Blog</h1>
+    {% for post in posts %}
+        <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+        <p>Published {{ post.publish }} by {{ post.author }}</p>
+        {{ post.body | slice:30|linebreaks }}
+    {% endfor %}
+    {% include "blog/pagination.html" with page=posts %}
+{% endblock %}
